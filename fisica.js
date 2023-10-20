@@ -31,7 +31,7 @@ function dado() {
 
         pJ1 = (pJ1 + resultado) % tabLength;
 
-        document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="m-2">${jogador}</p> `;
+        document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="p-2">${jogador}</p> `;
 
         jogador = "J2";
     } else {
@@ -45,7 +45,7 @@ function dado() {
 
         pJ2 = (pJ2 + resultado) % tabLength;
 
-        document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="m-2">${jogador}</p> `;
+        document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2">${jogador}</p> `;
 
         jogador = "J1";
     }
