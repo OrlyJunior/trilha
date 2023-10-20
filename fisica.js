@@ -31,7 +31,16 @@ function dado() {
 
         pJ1 = (pJ1 + resultado) % tabLength;
 
-        document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="p-2">${jogador}</p> `;
+        document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="p-2 text-success">${jogador}</p> `;
+
+        if (document.getElementsByTagName("div")[pJ1 + 1].classList.contains("bg-dark")) {
+            pAtual1.classList.add("text-light");
+            
+            var resposta = prompt("Pergunta");
+            if(resposta != null){
+                alert("Acertou!")
+            }
+        }
 
         jogador = "J2";
     } else {
@@ -45,7 +54,16 @@ function dado() {
 
         pJ2 = (pJ2 + resultado) % tabLength;
 
-        document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2">${jogador}</p> `;
+        document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2 text-primary">${jogador}</p> `;
+
+        if (document.getElementsByTagName("div")[pJ2 + 1].classList.contains("bg-dark")) {
+            pAtual2.classList.add("text-light");
+
+            var resposta = prompt("Pergunta");
+            if(resposta != null){
+                alert("Acertou!");
+            }
+        }
 
         jogador = "J1";
     }

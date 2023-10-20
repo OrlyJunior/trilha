@@ -7,16 +7,18 @@ div {
     justify-content: center;
 }
 
-.divBreak { 
+.divBreakD {
     position: absolute;
-    right: 0; 
-    margin-right: 4.5%;
+    right: 4.5%;
     flex-direction: row;
     height: 15%;
 }
 
-.divBreakP{
-    margin-top: 7.05%;
+.divBreakE {
+    position: absolute;
+    left: 4.5%;
+    flex-direction: row;
+    height: 15%;
 }
 
 body,
