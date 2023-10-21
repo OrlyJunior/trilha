@@ -25,8 +25,8 @@ body,
 html {
     height: 100vh;
     overflow: hidden;
-    background-image: url(Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
-    background-size: 100%;
+    background-image: url(Imagens/7d060031c60049314536131e18168655.jpg);
+
 }
 
 .break {
@@ -34,4 +34,11 @@ html {
     flex-wrap: wrap;
     flex-direction: row;
     border: 0;
+}
+
+@media screen and (min-width: 920px) {
+    body {
+        background-image: url(Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
+        background-size: 100%;
+    }
 }
