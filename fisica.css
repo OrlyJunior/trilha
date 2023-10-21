@@ -25,6 +25,8 @@ body,
 html {
     height: 100vh;
     overflow: hidden;
+    background-image: url(Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
+    background-size: 100%;
 }
 
 .break {
