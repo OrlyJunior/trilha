@@ -35,6 +35,7 @@ div {
 button {
     border: 0;
     background-color: rgb(140, 140, 255);
+    border-radius: 30px;
     padding: 30px;
 }
 

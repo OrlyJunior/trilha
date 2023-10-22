@@ -20,6 +20,33 @@ document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
 
 var tabLength = document.querySelectorAll("div").length - 1;
 
+function correto() {
+    document.getElementById("pergunta").remove();
+
+    document.body.insertAdjacentHTML("beforeend", `<div id="janela" style="height: 40%" class="pergunta">
+                                                            <p class="perguntaTitulo bg-light w-100 p-3 text-center">Você acertou!</p>
+                                                            <p style="display: flex; position: absolute; top: 35%;">Você ganhou um poder!</p>
+
+                                                            <button onclick="continuar()" style="border-radius: 12px; position: absolute; top: 55%;">Continuar</button>
+                                                        </div>`);
+}
+
+function continuar() {
+    document.getElementById("janela").remove();
+}
+
+function errado() {
+    document.getElementById("pergunta").remove();
+
+    document.body.insertAdjacentHTML("beforeend", `<div id="janela" style="height: 40%" class="pergunta">
+                                                            <p class="perguntaTitulo bg-light w-100 p-3 text-center">Você errou!</p>
+                                                            <p style="display: flex; position: absolute; top: 35%;">Você perdeu a chance de ganhar um poder!</p>
+
+                                                            <button onclick="continuar()" style="border-radius: 12px; position: absolute; top: 55%;">Continuar</button>
+                                                        </div>`);
+}
+
+
 function dado() {
     var resultado = Math.floor(Math.random() * 6);
     if (resultado == 0) {
@@ -46,7 +73,7 @@ function dado() {
         document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="p-2 text-success">${jogador}</p> `;
 
         if (document.getElementsByTagName("div")[pJ1 + 1].classList.contains("bg-dark")) {
-            document.body.insertAdjacentHTML("beforeend", `<div class="pergunta">
+            document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
                                                             <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
                                                     
                                                             <p style="position: absolute; top: 12%; font-weight: 750; word-break: break-all;" class="m-2">Texto da Pergunta</p>
@@ -55,9 +82,9 @@ function dado() {
                                                             <p style="position: absolute; top: 48%; left: 4%; font-weight: 750;">Alternativa 2</p>
                                                             <p style="position: absolute; top: 58%; left: 4%; font-weight: 750;">Alternativa 3</p>
                                                     
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
+                                                            <button onclick="correto()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
+                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
+                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
                                                         </div>`);
 
             document.getElementById("jogar").setAttribute("disabled");
@@ -84,7 +111,7 @@ function dado() {
         document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2 text-primary">${jogador}</p> `;
 
         if (document.getElementsByTagName("div")[pJ2 + 1].classList.contains("bg-dark")) {
-            document.body.insertAdjacentHTML("beforeend", `<div class="pergunta">
+            document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
                                                             <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
                                                     
                                                             <p style="position: absolute; top: 12%; font-weight: 750; word-break: break-all;" class="m-2">Texto da Pergunta</p>
@@ -93,9 +120,9 @@ function dado() {
                                                             <p style="position: absolute; top: 48%; left: 4%; font-weight: 750;">Alternativa 2</p>
                                                             <p style="position: absolute; top: 58%; left: 4%; font-weight: 750;">Alternativa 3</p>
                                                     
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
+                                                            <button onclick="correto()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
+                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
+                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
                                                         </div>`);
 
             document.getElementById("jogar").setAttribute("disabled");
@@ -124,7 +151,7 @@ function dado() {
         document.getElementsByTagName("div")[pJ3 + 1].innerHTML += ` <p class="p-2 text-danger">${jogador}</p> `;
 
         if (document.getElementsByTagName("div")[pJ3 + 1].classList.contains("bg-dark")) {
-            document.body.insertAdjacentHTML("beforeend", `<div class="pergunta">
+            document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
                                                             <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
                                                     
                                                             <p style="position: absolute; top: 12%; font-weight: 750; word-break: break-all;" class="m-2">Texto da Pergunta</p>
@@ -133,9 +160,9 @@ function dado() {
                                                             <p style="position: absolute; top: 48%; left: 4%; font-weight: 750;">Alternativa 2</p>
                                                             <p style="position: absolute; top: 58%; left: 4%; font-weight: 750;">Alternativa 3</p>
                                                     
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
+                                                            <button onclick="correto()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
+                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
+                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
                                                         </div>`);
 
             document.getElementById("jogar").setAttribute("disabled");
@@ -162,7 +189,7 @@ function dado() {
         document.getElementsByTagName("div")[pJ4 + 1].innerHTML += ` <p class="p-2 text-dark">${jogador}</p> `;
 
         if (document.getElementsByTagName("div")[pJ4 + 1].classList.contains("bg-dark")) {
-            document.body.insertAdjacentHTML("beforeend", `<div class="pergunta">
+            document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
                                                             <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
                                                     
                                                             <p style="position: absolute; top: 12%; font-weight: 750; word-break: break-all;" class="m-2">Texto da Pergunta</p>
@@ -171,9 +198,9 @@ function dado() {
                                                             <p style="position: absolute; top: 48%; left: 4%; font-weight: 750;">Alternativa 2</p>
                                                             <p style="position: absolute; top: 58%; left: 4%; font-weight: 750;">Alternativa 3</p>
                                                     
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
-                                                            <button onclick="responder()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
+                                                            <button onclick="correto()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
+                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
+                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
                                                         </div>`);
 
             document.getElementById("jogar").setAttribute("disabled");
@@ -182,9 +209,7 @@ function dado() {
         jogador = "J1";
 
         document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+
+
     }
-}
-
-function responder() {
-
 }
