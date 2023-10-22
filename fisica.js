@@ -18,7 +18,7 @@ var pAtual4 = "";
 
 var j1P1 = false;
 
-var j1P2 = false;
+var j1P2 = true;
 
 var j1P3 = false;
 
@@ -58,93 +58,221 @@ function correto() {
                                                             <button onclick="continuar()" style="border-radius: 12px; position: absolute; top: 55%;">Continuar</button>
                                                     </div>`);
 
-    if (poderes[poder] == "Fora de Órbita" && jogador == "J1") {
-        j1P1 = true;
-        jogador = "J2";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
+    if (jogador == "J1") {
+        if (j2P1 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+        }
+
+        if (j2P2 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+        }
+
+        if (j2P3 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+        }
     }
 
-    if (poderes[poder] == "Um Ano em Mercúrio" && jogador == "J1") {
-        j1P2 = true;
-        jogador = "J2";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
+    if (jogador == "J2") {
+        if (j3P1 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+        }
+
+        if (j3P2 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+        }
+
+        if (j3P3 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+        }
     }
 
-    if (poderes[poder] == "Um Ano em Plutão" && jogador == "J1") {
-        j1P3 = true;
-        jogador = "J2";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
-    }
+    if (jogador == "J3") {
+        if (j4P1 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+        }
 
-    if (poderes[poder] == "Fora de Órbita" && jogador == "J2") {
-        j2P1 = true;
-        jogador = "J3";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
-    }
+        if (j4P2 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+        }
 
-    if (poderes[poder] == "Um Ano em Mercúrio" && jogador == "J2") {
-        j2P2 = true;
-        jogador = "J3";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
-    }
+        if (j4P3 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+        }
 
-    if (poderes[poder] == "Um Ano em Plutão" && jogador == "J2") {
-        j2P3 = true;
-        jogador = "J3";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
-    }
+        if (jogador == "J4") {
+            if (j1P1 == true) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+            }
 
-    if (poderes[poder] == "Fora de Órbita" && jogador == "J3") {
-        j3P1 = true;
-        jogador = "J4";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
-    }
+            if (j1P2 == true) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+            }
 
-    if (poderes[poder] == "Um Ano em Mercúrio" && jogador == "J3") {
-        j3P2 = true;
-        jogador = "J4";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
-    }
+            if (j1P3 == true) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+            }
+        }
 
-    if (poderes[poder] == "Um Ano em Plutão" && jogador == "J3") {
-        j3P3 = true;
-        jogador = "J4";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
-    }
+        if (poderes[poder] == "Fora de Órbita" && jogador == "J1") {
+            j1P1 = true;
+            jogador = "J2";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
 
-    if (poderes[poder] == "Fora de Órbita" && jogador == "J4") {
-        j4P1 = true;
-        jogador = "J1";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
-    }
+        if (poderes[poder] == "Um Ano em Mercúrio" && jogador == "J1") {
+            j1P2 = true;
+            jogador = "J2";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
 
-    if (poderes[poder] == "Um Ano em Mercúrio" && jogador == "J4") {
-        j4P2 = true;
-        jogador = "J1";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
-    }
+        if (poderes[poder] == "Um Ano em Plutão" && jogador == "J1") {
+            j1P3 = true;
+            jogador = "J2";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
 
-    if (poderes[poder] == "Um Ano em Plutão" && jogador == "J4") {
-        j4P3 = true;
-        jogador = "J1";
-        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
-        return;
+        if (poderes[poder] == "Fora de Órbita" && jogador == "J2") {
+            j2P1 = true;
+            jogador = "J3";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
+
+        if (poderes[poder] == "Um Ano em Mercúrio" && jogador == "J2") {
+            j2P2 = true;
+            jogador = "J3";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
+
+        if (poderes[poder] == "Um Ano em Plutão" && jogador == "J2") {
+            j2P3 = true;
+            jogador = "J3";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
+
+        if (poderes[poder] == "Fora de Órbita" && jogador == "J3") {
+            j3P1 = true;
+            jogador = "J4";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
+
+        if (poderes[poder] == "Um Ano em Mercúrio" && jogador == "J3") {
+            j3P2 = true;
+            jogador = "J4";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
+
+        if (poderes[poder] == "Um Ano em Plutão" && jogador == "J3") {
+            j3P3 = true;
+            jogador = "J4";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
+
+        if (poderes[poder] == "Fora de Órbita" && jogador == "J4") {
+            j4P1 = true;
+            jogador = "J1";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
+
+        if (poderes[poder] == "Um Ano em Mercúrio" && jogador == "J4") {
+            j4P2 = true;
+            jogador = "J1";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
+
+        if (poderes[poder] == "Um Ano em Plutão" && jogador == "J4") {
+            j4P3 = true;
+            jogador = "J1";
+            document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+            return;
+        }
     }
 }
 
 function continuar() {
     document.getElementById("janela").remove();
+
+    if(jogador == "J1"){
+        if (j2P1 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+        }
+
+        if (j2P2 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+        }
+
+        if (j2P3 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+        }
+
+        jogador = "J2";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+    }
+
+    if(jogador == "J2"){
+        if (j3P1 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+        }
+
+        if (j3P2 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+        }
+
+        if (j3P3 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+        }
+
+        jogador = "J3";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+    }
+
+    if(jogador == "J3"){
+        if (j4P1 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+        }
+
+        if (j4P2 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+        }
+
+        if (j4P3 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+        }
+
+        jogador = "J4";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+    }
+
+    if(jogador == "J4"){
+        if (j1P1 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+        }
+
+        if (j1P2 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+        }
+
+        if (j1P3 == true) {
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+        }
+
+        jogador = "J1";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+    }
 }
 
 function errado() {
@@ -182,7 +310,6 @@ function errado() {
     }
 }
 
-
 function dado() {
     console.log(Math.floor(Math.random() * 3));
 
@@ -208,21 +335,31 @@ function dado() {
 
         document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="p-2 text-success">${jogador}</p> `;
 
+        if (document.getElementById("fora")) {
+            document.getElementById("fora").remove();
+        }
+
+        if (document.getElementById("mercurio")) {
+            document.getElementById("mercurio").remove();
+        }
+
+        if (document.getElementById("plutao")) {
+            document.getElementById("plutao").remove();
+        }
+
         if (j2P1 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="foraOrbita()" id="p2J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
         }
 
         if (j2P2 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="mercurio()" id="p2J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
         }
 
         if (j2P3 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="plutao" id="p2J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
         }
 
-        if (document.getElementById("p1J1")) {
-            document.getElementById("p1J1").remove();
-        }
+
 
 
         if (document.getElementsByTagName("div")[pJ1 + 1].classList.contains("bg-dark")) {
@@ -263,16 +400,28 @@ function dado() {
 
         document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2 text-primary">${jogador}</p> `;
 
+        if (document.getElementById("fora")) {
+            document.getElementById("fora").remove();
+        }
+
+        if (document.getElementById("mercurio")) {
+            document.getElementById("mercurio").remove();
+        }
+
+        if (document.getElementById("plutao")) {
+            document.getElementById("plutao").remove();
+        }
+
         if (j3P1 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="foraOrbita()" id="p3J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
         }
 
         if (j3P2 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="mercurio()" id="p3J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
         }
 
         if (j3P3 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="plutao()" id="p3J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao()" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
         }
 
         if (document.getElementById("p2J1")) {
@@ -319,16 +468,28 @@ function dado() {
 
         document.getElementsByTagName("div")[pJ3 + 1].innerHTML += ` <p class="p-2 text-danger">${jogador}</p> `;
 
+        if (document.getElementById("fora")) {
+            document.getElementById("fora").remove();
+        }
+
+        if (document.getElementById("mercurio")) {
+            document.getElementById("mercurio").remove();
+        }
+
+        if (document.getElementById("plutao")) {
+            document.getElementById("plutao").remove();
+        }
+
         if (j4P1 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="foraOrbita()" id="p4J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
         }
 
         if (j4P2 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="mercurio()" id="p4J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
         }
 
         if (j4P3 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="plutao()" id="p4J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao()" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
         }
 
         if (document.getElementById("p3J1")) {
@@ -397,16 +558,28 @@ function dado() {
 
         document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
 
+        if (document.getElementById("fora")) {
+            document.getElementById("fora").remove();
+        }
+
+        if (document.getElementById("mercurio")) {
+            document.getElementById("mercurio").remove();
+        }
+
+        if (document.getElementById("plutao")) {
+            document.getElementById("plutao").remove();
+        }
+
         if (j1P1 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="foraOrbita()" id="p1J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div id="fora" onclick="foraOrbita()" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
         }
 
         if (j1P2 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="mercurio()" id="p1J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div id="mercurio" onclick="mercurio()" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
         }
 
         if (j1P3 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="plutao()" id="p1J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+            document.body.insertAdjacentHTML("beforeend", `<div id="plutao" onclick="plutao()" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
         }
 
         if (document.getElementById("p4J1")) {
@@ -529,6 +702,12 @@ function foraOrbita() {
                                                         <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 45%;">J3</button>
                                                         <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 45%;">J4</button>
                                                     </div>`);
+
+        j1P1 = false;
+
+        document.getElementById("fora").remove();
+
+        return;
     }
 
     if (jogador == "J2") {
@@ -539,6 +718,12 @@ function foraOrbita() {
                                                         <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 45%;">J3</button>
                                                         <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 45%;">J4</button>
                                                     </div>`);
+
+        j2P1 = false;
+
+        document.getElementById("fora").remove();
+
+        return;
     }
 
     if (jogador == "J3") {
@@ -549,6 +734,12 @@ function foraOrbita() {
                                                         <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 45%;">J2</button>
                                                         <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 45%;">J4</button>
                                                     </div>`);
+
+        j3P1 = false;
+
+        document.getElementById("fora").remove();
+
+        return;
     }
 
     if (jogador == "J4") {
@@ -559,9 +750,125 @@ function foraOrbita() {
                                                         <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 45%;">J2</button>
                                                         <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 45%;">J3</button>
                                                     </div>`);
+
+        j4P1 = false;
+
+        document.getElementById("fora").remove();
+
+        return;
     }
 }
 
 function mercurio() {
-    
+    if (jogador == "J1") {
+        if (document.getElementsByTagName("p")[1].innerHTML == jogador) {
+            pAtual1 = document.getElementsByTagName("p")[1];
+        } else if (document.getElementsByTagName("p")[2].innerHTML == jogador) {
+            pAtual1 = document.getElementsByTagName("p")[2];
+        } else if (document.getElementsByTagName("p")[3].innerHTML == jogador) {
+            pAtual1 = document.getElementsByTagName("p")[3];
+        } else {
+            pAtual1 = document.getElementsByTagName("p")[0];
+        }
+
+        pAtual1.remove();
+
+        pJ1 = (pJ1 + 4) % tabLength;
+
+        document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="p-2 text-success">${jogador}</p> `;
+
+        j1P2 = false;
+
+        document.getElementById("mercurio").remove();
+
+        jogador = "J2";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+
+        return;
+    }
+
+    if (jogador == "J2") {
+        if (document.getElementsByTagName("p")[1].innerHTML == jogador) {
+            pAtual2 = document.getElementsByTagName("p")[1];
+        } else if (document.getElementsByTagName("p")[2].innerHTML == jogador) {
+            pAtual2 = document.getElementsByTagName("p")[2];
+        } else if (document.getElementsByTagName("p")[3].innerHTML == jogador) {
+            pAtual2 = document.getElementsByTagName("p")[3];
+        } else {
+            pAtual2 = document.getElementsByTagName("p")[0];
+        }
+
+        pAtual2.remove();
+
+        pJ2 = (pJ2 + 4) % tabLength;
+
+        document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2 text-primary">${jogador}</p> `;
+
+        j2P2 = false;
+
+        jogador = "J3";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+
+        document.getElementById("mercurio").remove();
+
+        return;
+    }
+
+    if (jogador == "J3") {
+        if (document.getElementsByTagName("p")[1].innerHTML == jogador) {
+            pAtual3 = document.getElementsByTagName("p")[1];
+        } else if (document.getElementsByTagName("p")[2].innerHTML == jogador) {
+            pAtual3 = document.getElementsByTagName("p")[2];
+        } else if (document.getElementsByTagName("p")[3].innerHTML == jogador) {
+            pAtual3 = document.getElementsByTagName("p")[3];
+        } else {
+            pAtual3 = document.getElementsByTagName("p")[0];
+        }
+
+        pAtual3.remove();
+
+        pJ3 = (pJ3 + 4) % tabLength;
+
+        document.getElementsByTagName("div")[pJ3 + 1].innerHTML += ` <p class="p-2 text-danger">${jogador}</p> `;
+
+        j3P2 = false;
+
+        jogador = "J4";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+
+        document.getElementById("mercurio").remove();
+
+        return;
+    }
+
+    if (jogador == "J4") {
+        if (document.getElementsByTagName("p")[1].innerHTML == jogador) {
+            pAtual4 = document.getElementsByTagName("p")[1];
+        } else if (document.getElementsByTagName("p")[2].innerHTML == jogador) {
+            pAtual4 = document.getElementsByTagName("p")[2];
+        } else if (document.getElementsByTagName("p")[3].innerHTML == jogador) {
+            pAtual4 = document.getElementsByTagName("p")[3];
+        } else {
+            pAtual4 = document.getElementsByTagName("p")[0];
+        }
+
+        pAtual4.remove();
+
+        pJ4 = (pJ4 + 4) % tabLength;
+
+        document.getElementsByTagName("div")[pJ4 + 1].innerHTML += ` <p class="p-2 text-warning">${jogador}</p> `;
+
+        j4P2 = false;
+
+        jogador = "J1";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+
+        document.getElementById("mercurio").remove();
+
+        return;
+    }
 }
