@@ -20,7 +20,7 @@ var j1P1 = false;
 
 var j1P2 = false;
 
-var J1P3 = false;
+var j1P3 = false;
 
 var j2P1 = false;
 
@@ -209,15 +209,15 @@ function dado() {
         document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="p-2 text-success">${jogador}</p> `;
 
         if (j2P1 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p2J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="foraOrbita()" id="p2J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
         }
 
         if (j2P2 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p2J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="mercurio()" id="p2J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
         }
 
         if (j2P3 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p2J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="plutao" id="p2J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
         }
 
         if (document.getElementById("p1J1")) {
@@ -264,15 +264,15 @@ function dado() {
         document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2 text-primary">${jogador}</p> `;
 
         if (j3P1 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p3J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="foraOrbita()" id="p3J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
         }
 
         if (j3P2 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p3J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="mercurio()" id="p3J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
         }
 
         if (j3P3 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p3J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="plutao()" id="p3J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
         }
 
         if (document.getElementById("p2J1")) {
@@ -320,19 +320,19 @@ function dado() {
         document.getElementsByTagName("div")[pJ3 + 1].innerHTML += ` <p class="p-2 text-danger">${jogador}</p> `;
 
         if (j4P1 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p4J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="foraOrbita()" id="p4J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
         }
 
         if (j4P2 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p4J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="mercurio()" id="p4J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
         }
 
         if (j4P3 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p4J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="plutao()" id="p4J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
         }
 
-        if (document.getElementById("p4J1")) {
-            document.getElementById("p4J1").remove();
+        if (document.getElementById("p3J1")) {
+            document.getElementById("p3J1").remove();
         }
 
         if (document.getElementsByTagName("div")[pJ3 + 1].classList.contains("bg-dark")) {
@@ -371,7 +371,7 @@ function dado() {
 
         pJ4 = (pJ4 + resultado) % tabLength;
 
-        document.getElementsByTagName("div")[pJ4 + 1].innerHTML += ` <p class="p-2 text-dark">${jogador}</p> `;
+        document.getElementsByTagName("div")[pJ4 + 1].innerHTML += ` <p class="p-2 text-warning">${jogador}</p> `;
 
 
         if (document.getElementsByTagName("div")[pJ4 + 1].classList.contains("bg-dark")) {
@@ -398,23 +398,170 @@ function dado() {
         document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
 
         if (j1P1 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p1J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="foraOrbita()" id="p1J1" class="poder"><div class="poder2"><img src="Imagens/645410.png" width="85%"></div></div>`);
         }
 
         if (j1P2 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p1J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="mercurio()" id="p1J1" class="poder"><div class="poder2"><img src="Imagens/mercurio_318-881959.png" width="85%"></div></div>`);
         }
 
         if (j1P3 == true) {
-            document.body.insertAdjacentHTML("beforeend", `<div id="p1J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="plutao()" id="p1J1" class="poder"><div class="poder2"><img src="Imagens/pngtree-pluto-line-icon-vector-png-image_6640934.png" width="85%"></div></div>`)
         }
 
-        if (document.getElementById("p1J1")) {
-            document.getElementById("p1J1").remove();
+        if (document.getElementById("p4J1")) {
+            document.getElementById("p4J1").remove();
         }
 
         jogador = "J1";
 
         document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
     }
+}
+
+function volta(player) {
+    console.log(player.innerHTML)
+
+    if (player.innerHTML == "J1") {
+        if (document.getElementsByTagName("p")[1].innerHTML == player.innerHTML) {
+            pAtual1 = document.getElementsByTagName("p")[1];
+        } else if (document.getElementsByTagName("p")[2].innerHTML == player.innerHTML) {
+            pAtual1 = document.getElementsByTagName("p")[2];
+        } else if (document.getElementsByTagName("p")[3].innerHTML == player.innerHTML) {
+            pAtual1 = document.getElementsByTagName("p")[3];
+        } else {
+            pAtual1 = document.getElementsByTagName("p")[0];
+        }
+
+        pAtual1.remove();
+
+
+        pJ1 = (pJ1 - 3) % tabLength;
+
+        if (!document.getElementsByTagName("div")[pJ1 + 1]) {
+            document.getElementsByTagName("div")[1].innerHTML += ` <p class="p-2 text-success">${player.innerHTML}</p> `;
+        } else {
+            document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="p-2 text-success">${player.innerHTML}</p> `;
+        }
+
+        document.getElementById("volta").remove();
+    }
+
+    if (player.innerHTML == "J2") {
+        if (document.getElementsByTagName("p")[1].innerHTML == player.innerHTML) {
+            pAtual2 = document.getElementsByTagName("p")[1];
+        } else if (document.getElementsByTagName("p")[2].innerHTML == player.innerHTML) {
+            pAtual2 = document.getElementsByTagName("p")[2];
+        } else if (document.getElementsByTagName("p")[3].innerHTML == player.innerHTML) {
+            pAtual2 = document.getElementsByTagName("p")[3];
+        } else {
+            pAtual2 = document.getElementsByTagName("p")[0];
+        }
+
+        pAtual2.remove();
+
+        pJ2 = (pJ2 - 3) % tabLength;
+
+        if (!document.getElementsByTagName("div")[pJ2 + 1]) {
+            document.getElementsByTagName("div")[1].innerHTML += ` <p class="p-2 text-primary">${player.innerHTML}</p> `;
+        } else {
+            document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2 text-primary">${player.innerHTML}</p> `;
+        }
+
+        document.getElementById("volta").remove();
+    }
+
+    if (player.innerHTML == "J3") {
+        if (document.getElementsByTagName("p")[1].innerHTML == player.innerHTML) {
+            pAtual3 = document.getElementsByTagName("p")[1];
+        } else if (document.getElementsByTagName("p")[2].innerHTML == player.innerHTML) {
+            pAtual3 = document.getElementsByTagName("p")[2];
+        } else if (document.getElementsByTagName("p")[3].innerHTML == player.innerHTML) {
+            pAtual3 = document.getElementsByTagName("p")[3];
+        } else {
+            pAtual3 = document.getElementsByTagName("p")[0];
+        }
+
+        pAtual3.remove();
+
+        pJ3 = (pJ3 - 3) % tabLength;
+
+        if (!document.getElementsByTagName("div")[pJ3 + 1]) {
+            document.getElementsByTagName("div")[1].innerHTML += ` <p class="p-2 text-danger">${player.innerHTML}</p> `;
+        } else {
+            document.getElementsByTagName("div")[pJ3 + 1].innerHTML += ` <p class="p-2 text-danger">${player.innerHTML}</p> `;
+        }
+
+        document.getElementById("volta").remove();
+    }
+
+    if (player.innerHTML == "J4") {
+        if (document.getElementsByTagName("p")[1].innerHTML == player.innerHTML) {
+            pAtual4 = document.getElementsByTagName("p")[1];
+        } else if (document.getElementsByTagName("p")[2].innerHTML == player.innerHTML) {
+            pAtual4 = document.getElementsByTagName("p")[2];
+        } else if (document.getElementsByTagName("p")[3].innerHTML == player.innerHTML) {
+            pAtual4 = document.getElementsByTagName("p")[3];
+        } else {
+            pAtual4 = document.getElementsByTagName("p")[0];
+        }
+
+        pAtual4.remove();
+
+        pJ4 = (pJ4 - 3) % tabLength;
+
+        if (!document.getElementsByTagName("div")[pJ4 + 1]) {
+            document.getElementsByTagName("div")[1].innerHTML += ` <p class="p-2 text-warning">${player.innerHTML}</p> `;
+        } else {
+            document.getElementsByTagName("div")[pJ4 + 1].innerHTML += ` <p class="p-2 text-warning">${player.innerHTML}</p> `;
+        }
+
+        document.getElementById("volta").remove();
+    }
+}
+
+function foraOrbita() {
+    if (jogador == "J1") {
+        document.body.insertAdjacentHTML("beforeend", `<div id="volta" style="height: 30%; top: 25%;" class="pergunta">
+                                                        <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Qual jogador você deseja mandar para trás?</p>
+
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 45%;">J2</button>
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 45%;">J3</button>
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 45%;">J4</button>
+                                                    </div>`);
+    }
+
+    if (jogador == "J2") {
+        document.body.insertAdjacentHTML("beforeend", `<div id="volta" style="height: 30%; top: 25%;" class="pergunta">
+                                                        <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Qual jogador você deseja mandar para trás?</p>
+
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 45%;">J1</button>
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 45%;">J3</button>
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 45%;">J4</button>
+                                                    </div>`);
+    }
+
+    if (jogador == "J3") {
+        document.body.insertAdjacentHTML("beforeend", `<div id="volta" style="height: 30%; top: 25%;" class="pergunta">
+                                                        <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Qual jogador você deseja mandar para trás?</p>
+
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 45%;">J1</button>
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 45%;">J2</button>
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 45%;">J4</button>
+                                                    </div>`);
+    }
+
+    if (jogador == "J4") {
+        document.body.insertAdjacentHTML("beforeend", `<div id="volta" style="height: 30%; top: 25%;" class="pergunta">
+                                                        <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Qual jogador você deseja mandar para trás?</p>
+
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 45%;">J1</button>
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 45%;">J2</button>
+                                                        <button onclick="volta(this)" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 45%;">J3</button>
+                                                    </div>`);
+    }
+}
+
+function mercurio() {
+    
 }
