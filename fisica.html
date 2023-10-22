@@ -13,64 +13,34 @@
 </head>
 
 <body>
-    <div class="w-100 div2 mt-5 mb-0 p-0" style="border: 0; flex-direction: row; height: 15%">
-
-        <div class="bg-light flex-wrap">
-            <p class="text-success p-2 w-50">J1</p>
-            <p class="d-flex p-2 text-primary w-50">J2</p>
-            <p class="p-2 text-danger w-50">J3</p>
-            <p class="p-2 text-dark w-50">J4</p>
+    <div>
+        <div class="começo">
+            <p class="player">J1</p>
+            <p class="player">J2</p>
+            <p class="player">J3</p>
+            <p class="player">J4</p>
         </div>
-        <div class="bg-light"> </div>
-        <div class="bg-dark"> </div>
-        <div class="bg-light"> </div>
-        <div class="bg-light"> </div>
-        <div class="bg-light"> </div>
-        <div class="bg-light"> </div>
-        <div class="bg-light"> </div>
-        <div class="bg-light"> </div>
-        <div class="bg-light"> </div>
-        <div class="bg-dark"> </div>
-        <div class="bg-light"> </div>
-        <div class="bg-light"> </div>
+
+        <div class="vazio"> </div>
+        <div class="perguntados"> </div>
+        <div class="vazio"> </div>
+        <div class="vazio"> </div>
+        <div class="vazio"> </div>
+        <div class="vazio"> </div>
+        <div class="vazio"> </div>
+        <div class="vazio"> </div>
+        <div class="vazio"> </div>
+        <div class="perguntados"> </div>
+        <div class="vazio"> </div>
+        <div class="vazio"> </div>
+        <DIV class="curva">
+            <div class="vazio"> </div>
+            <div class="perguntados"> </div>
+            <div class="vazio"> </div>
+        </DIV>
     </div>
 
-    <div class="divBreakD bg-light"> </div>
-    <div class="divBreakD bg-light" style="margin-top: 7.05%;"> </div>
-
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 11.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 18.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 25.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 32.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 39.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 46.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 53.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 60.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 67.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 74.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 81.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 37.5%; right: 88.5%;"></div>
-
-    <div class="divBreakE bg-light" style="top: 52.3%;"></div>
-    <div class="divBreakE bg-light" style="top: 67.1%;"></div>
-
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 81.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 74.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 67.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 60.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 53.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 46.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 39.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 32.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 25.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 18.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 11.5%;"></div>
-    <div class="bg-light" style="height: 15%; position: absolute; top: 67.1%; right: 4.5%;"></div>
-
-    <div style="border:0; width: 100%; bottom: -250px; position: absolute;">
-        <p class="text-center" id="vez">Vez de: </p>
-        <button id="jogar" class="ms-2 btn btn-dark" onclick="dado()">Jogar o dado</button>
-    </div>
+    <button onclick="rodar()">Andar</button>
 
     <script src="fisica.js"></script>
 </body>

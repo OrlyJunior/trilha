@@ -1,43 +1,54 @@
 body {
     background-image: url(Imagens/7d060031c60049314536131e18168655.jpg);
-    height: 100vh;
-    overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
+    
 }
 
-div {
+.conteudo {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+p{
+    text-align: center;
+    font-size: 70px;
+    color:white;
+    font-family: monospace;
+    margin: 0%;
+}
 
 img{
-    justify-self: center;
+    display: flex;
+    justify-content:center;
+    margin-bottom: 10px;
 }
 a {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-decoration: none;
     background-color: black;
     border-radius: 12px;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: monospace;
     border: 0;
     padding: 12px;
     font-size: 16px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.75);
 }
 
 a:hover {
-    box-shadow: 0px 0px 33px 3px rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 3px 33px 3px rgba(0, 0, 0, 0.85);
     background-color: rgb(20, 20, 20);
     animation: botao;
     animation-duration: 0.5s;
 }
-
+a:active{
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+    
 
 
 @keyframes botao {

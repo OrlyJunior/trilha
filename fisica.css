@@ -1,93 +1,37 @@
 div {
-    width: 7%;
-    height: 100%;
-    border: 1px solid black;
+    padding: 7px;
+    display: inline-flex;
+    width: 90%;
+    margin: 10px;
+    text-align: center;
+}
+
+body{
+    background-image: url(./Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
+}
+
+.player {
+    margin: 0%;
+}
+
+.começo {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 0, 0, 0.308);
+    color: white;
+
 }
 
-.pergunta {
-    flex-wrap: wrap;
-    position: absolute;
-    border-radius: 16px;
-    border: 0;
+.vazio {
+    background-color: rgba(163, 73, 253, 0.527);
     display: flex;
-    align-items: start;
-    height: 80%;
-    width: 50%;
-    left: 25%;
-    right: 25%;
-    top: 10%;
-    bottom: 10%;
-    background-image: linear-gradient(299deg, rgba(139, 195, 251, 1) 0%, rgba(123, 184, 245, 1) 25%, rgba(109, 182, 255, 1) 50%, rgba(101, 176, 255, 1) 75%, rgba(90, 171, 255, 1) 100%);
-    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.75);
-    animation: entrada 0.3s linear 0s 1 normal none;
+    flex-direction: column;
+    color: white;
 }
 
-.divBreakD {
-    position: absolute;
-    right: 4.5%;
-    flex-direction: row;
-    height: 15%;
-}
-
-button {
-    border: 0;
-    background-color: rgb(140, 140, 255);
-    padding: 30px;
-}
-
-.buttons {
+.perguntados {
+    background-color: rgba(0, 0, 209, 0.308);
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    border: 0;
-}
-
-.divBreakE {
-    position: absolute;
-    left: 4.5%;
-    flex-direction: row;
-    height: 15%;
-}
-
-body,
-html {
-    height: 100vh;
-    overflow: hidden;
-    background-image: url(Imagens/7d060031c60049314536131e18168655.jpg);
-}
-
-.perguntaTitulo {
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    position: absolute;
-    top: 0;
-}
-
-.break {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    border: 0;
-}
-
-@media screen and (min-width: 920px) {
-    body {
-        background-image: url(Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
-        background-size: 100%;
-    }
-}
-
-@keyframes entrada {
-    0% {
-        width: 0%;
-        height: 0%;
-    }
-
-    100% {
-        width: 50%;
-        height: 80%;
-    }
+    flex-direction: column;
+    color: white;
 }

@@ -4,23 +4,28 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 p {
     width: 100%;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:monospace;
     color: white;
     opacity: 100%;
 }
 
 .divS {
-    background-color: rgba(0, 0, 0, 0.548);
+    background-color: rgba(0, 0, 0, 0.795);
     padding: 12px;
     border-radius: 12px;
     box-shadow: -1px 13px 11px 8px rgba(0, 0, 0, 0.39);
-    margin: 20px;
+    margin: 30px;
     display: block;
+    font-size: 17px;
+}
+.title{
+    font-size: 20px;
 }
 
 .divB {
@@ -30,7 +35,7 @@ p {
 }
 
 a {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     text-decoration: none;
     background-color: black;
@@ -49,10 +54,14 @@ a:hover {
     animation: botao;
     animation-duration: 0.5s;
 }
+a:active{
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
 
 ::-webkit-scrollbar{
     border-radius: 12px;
-    color: rgba(0, 0, 0, 0.705);
+    color: rgb(0, 0, 0);
 }
 
 @keyframes botao {
