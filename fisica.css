@@ -35,3 +35,7 @@ body{
     flex-direction: column;
     color: white;
 }
+button{
+    display: flex;
+    justify-content: center;
+}
