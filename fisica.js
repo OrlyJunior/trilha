@@ -37,12 +37,14 @@ function correto() {
         pJ1 = (pJ1 + 2) % tabLength;
 
         document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="p-2 text-success">${jogador}</p> `;
-    
+
         jogador = "J2";
 
         document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
 
         document.getElementById("pergunta").remove();
+
+        document.getElementById("jogar").disabled = false;
 
         return;
     }
@@ -63,12 +65,14 @@ function correto() {
         pJ2 = (pJ2 + 2) % tabLength;
 
         document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2 text-primary">${jogador}</p> `;
-    
+
         jogador = "J3";
 
         document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
 
         document.getElementById("pergunta").remove();
+
+        document.getElementById("jogar").disabled = false;
 
         return;
     }
@@ -89,12 +93,14 @@ function correto() {
         pJ3 = (pJ2 + 3) % tabLength;
 
         document.getElementsByTagName("div")[pJ3 + 1].innerHTML += ` <p class="p-2 text-danger">${jogador}</p> `;
-    
+
         jogador = "J4";
 
         document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
 
         document.getElementById("pergunta").remove();
+
+        document.getElementById("jogar").disabled = false;
 
         return;
     }
@@ -115,20 +121,20 @@ function correto() {
         pJ4 = (pJ4 + 2) % tabLength;
 
         document.getElementsByTagName("div")[pJ4 + 1].innerHTML += ` <p class="p-2 text-warning">${jogador}</p> `;
-    
+
         jogador = "J1";
 
         document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
 
         document.getElementById("pergunta").remove();
 
+        document.getElementById("jogar").disabled = false;
+
         return;
     }
 }
 
 function dado() {
-    console.log(Math.floor(Math.random() * 3));
-
     var resultado = Math.floor(Math.random() * 6);
     if (resultado == 0) {
         resultado = resultado + 1;
@@ -149,9 +155,11 @@ function dado() {
 
         pJ1 = (pJ1 + resultado) % tabLength;
 
-        document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="p-2 text-success">${jogador}</p> `;
+        document.getElementsByTagName("div")[pJ1 + 1].innerHTML += ` <p class="text-success p-2 w-50">${jogador}</p> `;
 
         if (document.getElementsByTagName("div")[pJ1 + 1].classList.contains("bg-dark")) {
+            document.getElementById("jogar").disabled = true;
+
             document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
                                                             <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
                                                     
@@ -165,6 +173,16 @@ function dado() {
                                                             <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
                                                             <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
                                                         </div>`);
+
+            return;
+        }
+
+        if (document.getElementById("final").innerHTML == `<p class="text-success p-2 w-50">${jogador}</p>`) {
+            document.body.insertAdjacentHTML("beforeend", `    <div style="top: 44%; height: 8.5%; border-radius: 12px;" class="pergunta">
+            <p style="border-radius: 12px;" class="w-100 p-3 bg-primary text-center">O vencedor é o jogador ${jogador}</p>
+       </div>`);
+
+            document.getElementById("jogar").disabled = true;
 
             return;
         }
@@ -187,9 +205,11 @@ function dado() {
 
         pJ2 = (pJ2 + resultado) % tabLength;
 
-        document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2 text-primary">${jogador}</p> `;
+        document.getElementsByTagName("div")[pJ2 + 1].innerHTML += ` <p class="p-2 text-primary w-50">${jogador}</p> `;
 
         if (document.getElementsByTagName("div")[pJ2 + 1].classList.contains("bg-dark")) {
+            document.getElementById("jogar").disabled = true;
+
             document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
                                                             <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
                                                     
@@ -203,6 +223,16 @@ function dado() {
                                                             <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
                                                             <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
                                                         </div>`);
+
+            return;
+        }
+
+        if (document.getElementById("final").innerHTML == `<p class="p-2 text-primary w-50">${jogador}</p>`) {
+            document.body.insertAdjacentHTML("beforeend", `<div style="top: 44%; height: 8.5%; border-radius: 12px;" class="pergunta">
+            <p style="border-radius: 12px;" class="w-100 p-3 bg-primary text-center">O vencedor é o jogador ${jogador}</p>
+       </div>`);
+
+            document.getElementById("jogar").disabled = true;
 
             return;
         }
@@ -227,9 +257,11 @@ function dado() {
 
         pJ3 = (pJ3 + resultado) % tabLength;
 
-        document.getElementsByTagName("div")[pJ3 + 1].innerHTML += ` <p class="p-2 text-danger">${jogador}</p> `;
+        document.getElementsByTagName("div")[pJ3 + 1].innerHTML += ` <p class="p-2 text-danger w-50">${jogador}</p> `;
 
         if (document.getElementsByTagName("div")[pJ3 + 1].classList.contains("bg-dark")) {
+            document.getElementById("jogar").disabled = true;
+
             document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
                                                             <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
                                                     
@@ -243,6 +275,16 @@ function dado() {
                                                             <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
                                                             <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
                                                         </div>`);
+
+            return;
+        }
+
+        if (document.getElementById("final").innerHTML == ` <p class="p-2 text-danger w-50">${jogador}</p> `) {
+            document.body.insertAdjacentHTML("beforeend", `    <div style="top: 44%; height: 8.5%; border-radius: 12px;" class="pergunta">
+            <p style="border-radius: 12px;" class="w-100 p-3 bg-primary text-center">O vencedor é o jogador ${jogador}</p>
+       </div>`);
+
+            document.getElementById("jogar").disabled = true;
 
             return;
         }
@@ -265,10 +307,12 @@ function dado() {
 
         pJ4 = (pJ4 + resultado) % tabLength;
 
-        document.getElementsByTagName("div")[pJ4 + 1].innerHTML += ` <p class="p-2 text-warning">${jogador}</p> `;
+        document.getElementsByTagName("div")[pJ4 + 1].innerHTML += ` <p class="p-2 text-warning w-50">${jogador}</p> `;
 
 
         if (document.getElementsByTagName("div")[pJ4 + 1].classList.contains("bg-dark")) {
+            document.getElementById("jogar").disabled = true;
+
             document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
                                                             <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
                                                     
@@ -282,6 +326,15 @@ function dado() {
                                                             <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
                                                             <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
                                                         </div>`);
+
+            return;
+        }
+
+        if (document.getElementById("final").innerHTML == ` <p class="p-2 text-warning w-50">${jogador}</p> `) {
+            document.body.insertAdjacentHTML("beforeend", `    <div style="top: 44%; height: 8.5%; border-radius: 12px;" class="pergunta">
+                                                                    <p style="border-radius: 12px;" class="w-100 p-3 bg-primary text-center">O vencedor é o jogador ${jogador}</p>
+                                                               </div>`);
+            document.getElementById("jogar").disabled = true;
 
             return;
         }
