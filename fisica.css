@@ -105,16 +105,12 @@ html {
     position: absolute;
 }
 
-@media screen and (min-height: 1000px) {
-    div{
-        width: 100%;
-    }
-
+@media screen and (min-width: 1000px) {
     body {
         background-image: url(Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
         background-size: 100%;
     }
-}
+  }
 
 @keyframes entrada {
     0% {
