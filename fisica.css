@@ -101,7 +101,7 @@ html {
 .botao {
     border: 0;
     width: 100%;
-    bottom: -250px;
+    bottom: -150px;
     position: absolute;
 }
 
@@ -110,7 +110,7 @@ html {
         background-image: url(Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
         background-size: 100%;
     }
-  }
+}
 
 @keyframes entrada {
     0% {
