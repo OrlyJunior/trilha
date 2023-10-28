@@ -1,6 +1,6 @@
 div {
-    width: 7%;
-    height: 100%;
+    width: 13%;
+    height: 80%;
     border: 1px solid black;
     display: flex;
     align-items: center;
@@ -26,10 +26,11 @@ div {
 }
 
 .divBreakD {
+    top: 20%;
     position: absolute;
     right: 4.5%;
     flex-direction: row;
-    height: 15%;
+    height: 12%;
 }
 
 button {
@@ -61,7 +62,7 @@ button {
     cursor: pointer;
 }
 
-.poder2{
+.poder2 {
     border: 0;
     border-radius: 150px;
     width: 89%;
@@ -73,7 +74,7 @@ button {
     position: absolute;
     left: 4.5%;
     flex-direction: row;
-    height: 15%;
+    height: 12%;
 }
 
 body,
@@ -97,7 +98,18 @@ html {
     border: 0;
 }
 
-@media screen and (min-width: 920px) {
+.botao {
+    border: 0;
+    width: 100%;
+    bottom: -250px;
+    position: absolute;
+}
+
+@media screen and (min-height: 1000px) {
+    div{
+        width: 100%;
+    }
+
     body {
         background-image: url(Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
         background-size: 100%;
