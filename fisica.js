@@ -140,8 +140,9 @@ function correto() {
 }
 
 function dado() {
+    console.log(Math.floor(Math.random() * 3 + 1))
     var resultado = Math.floor(Math.random() * 6);
-    
+
     if (resultado == 0) {
         resultado = resultado + 1;
     }
@@ -161,7 +162,7 @@ function dado() {
 
         pJ1 = (pJ1 + resultado);
 
-        if(pJ1 > 22){
+        if (pJ1 > 22) {
             pJ1 = 22;
         }
 
@@ -170,19 +171,63 @@ function dado() {
         if (document.getElementsByClassName("div")[pJ1].classList.contains("bg-dark")) {
             document.getElementById("jogar").disabled = true;
 
-            document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
-                                                            <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador J1</p>
-                                                    
-                                                            <p style="position: absolute; top: 12%; font-weight: 750; word-break: break-all;" class="m-2">Texto da Pergunta</p>
-                                                    
-                                                            <p style="position: absolute; top: 38%; left: 4%; font-weight: 750;">Alternativa 1</p>
-                                                            <p style="position: absolute; top: 48%; left: 4%; font-weight: 750;">Alternativa 2</p>
-                                                            <p style="position: absolute; top: 58%; left: 4%; font-weight: 750;">Alternativa 3</p>
-                                                    
-                                                            <button onclick="correto()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
-                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
-                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
-                                                        </div>`);
+            var sorteioP = Math.floor(Math.random() * 3 + 1);
+
+            if (sorteioP == 0) {
+                sorteioP = sorteioP + 1;
+            }
+
+            if (sorteioP == 1) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                               <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                            
+                                                               <p class="linha1">Segundo a Primeira Lei de Kepler:</p>
+                                                            
+                                                               <p style="top: 20%;" class="alternativas">A - A velocidade de translação de um planeta que orbita o Sol é sempre constante ao longo da órbita.</p>
+                                                               <p style="top: 42%;" class="alternativas">B - A órbita dos planetas em torno do Sol é elíptica e tem o Sol em um de seus focos.</p>
+                                                               <p style="top: 60%;" class="alternativas">C - A linha imaginária que liga a Terra até o Sol varre áreas iguais em períodos iguais.</p>
+                                                            
+                                                               <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                               <button onclick="correto()" class="botaoA" style="left: 40%;">B</button>
+                                                               <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
+                                                            </div>`);
+
+                return;
+            }
+
+            if (sorteioP == 2) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                                            <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                                    
+                                                                            <p class="linha1">Baseado nas leis de Kepler, a velocidade de um planeta:</p>
+                                                                    
+                                                                            <p style="top: 26%;" class="alternativas">A - Independe de sua posição relativamente ao sol.</p>
+                                                                            <p style="top: 43%;" class="alternativas">B - Diminui quando está mais próximo do sol.</p>
+                                                                            <p style="top: 61%;" class="alternativas">C - Aumenta quando está mais próximo do sol.</p>
+                                                                    
+                                                                            <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                                            <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
+                                                                            <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
+                                                                        </div>`);
+
+                return;
+            }
+
+            if (sorteioP == 3) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                                    <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                            
+                                                                    <p class="linha1">No sistema planetário:</p>
+                                                            
+                                                                    <p style="top: 21%;" class="alternativas">A - Cada planeta se move numa trajetória elíptica, tendo o sol como o centro.</p>
+                                                                    <p style="top: 38.5%;" class="alternativas">B - A linha que une o sol ao planeta descreve áreas iguais em tempos iguais.</p>
+                                                                    <p style="top: 57%;" class="alternativas">C - A razão do raio de órbita para seu período é uma constante universal.</p>
+                                                            
+                                                                    <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                                    <button onclick="correto()" class="botaoA" style="left: 40%;">B</button>
+                                                                    <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
+                                                                </div>`);
+            }
 
             return;
         }
@@ -215,7 +260,7 @@ function dado() {
 
         pJ2 = (pJ2 + resultado);
 
-        if(pJ2 > 22){
+        if (pJ2 > 22) {
             pJ2 = 22;
         }
 
@@ -224,19 +269,59 @@ function dado() {
         if (document.getElementsByClassName("div")[pJ2].classList.contains("bg-dark")) {
             document.getElementById("jogar").disabled = true;
 
-            document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
-                                                            <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador J2</p>
-                                                    
-                                                            <p style="position: absolute; top: 12%; font-weight: 750; word-break: break-all;" class="m-2">Texto da Pergunta</p>
-                                                    
-                                                            <p style="position: absolute; top: 38%; left: 4%; font-weight: 750;">Alternativa 1</p>
-                                                            <p style="position: absolute; top: 48%; left: 4%; font-weight: 750;">Alternativa 2</p>
-                                                            <p style="position: absolute; top: 58%; left: 4%; font-weight: 750;">Alternativa 3</p>
-                                                    
-                                                            <button onclick="correto()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
-                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
-                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
-                                                        </div>`);
+            var sorteioP = Math.floor(Math.random() * 3 + 1);
+
+            if (sorteioP == 1) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                               <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                            
+                                                               <p class="linha1">Segundo a Primeira Lei de Kepler:</p>
+                                                            
+                                                               <p style="top: 20%;" class="alternativas">A - A velocidade de translação de um planeta que orbita o Sol é sempre constante ao longo da órbita.</p>
+                                                               <p style="top: 42%;" class="alternativas">B - A órbita dos planetas em torno do Sol é elíptica e tem o Sol em um de seus focos.</p>
+                                                               <p style="top: 60%;" class="alternativas">C - A linha imaginária que liga a Terra até o Sol varre áreas iguais em períodos iguais.</p>
+                                                            
+                                                               <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                               <button onclick="correto()" class="botaoA" style="left: 40%;">B</button>
+                                                               <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
+                                                            </div>`);
+
+                return;
+            }
+
+            if (sorteioP == 2) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                                            <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                                    
+                                                                            <p class="linha1">Baseado nas leis de Kepler, a velocidade de um planeta:</p>
+                                                                    
+                                                                            <p style="top: 26%;" class="alternativas">A - Independe de sua posição relativamente ao sol.</p>
+                                                                            <p style="top: 43%;" class="alternativas">B - Diminui quando está mais próximo do sol.</p>
+                                                                            <p style="top: 61%;" class="alternativas">C - Aumenta quando está mais próximo do sol.</p>
+                                                                    
+                                                                            <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                                            <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
+                                                                            <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
+                                                                        </div>`);
+
+                return;
+            }
+
+            if (sorteioP == 3) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                                    <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                            
+                                                                    <p class="linha1">No sistema planetário:</p>
+                                                            
+                                                                    <p style="top: 21%;" class="alternativas">A - Cada planeta se move numa trajetória elíptica, tendo o sol como o centro.</p>
+                                                                    <p style="top: 38.5%;" class="alternativas">B - A linha que une o sol ao planeta descreve áreas iguais em tempos iguais.</p>
+                                                                    <p style="top: 57%;" class="alternativas">C - A razão do raio de órbita para seu período é uma constante universal.</p>
+                                                            
+                                                                    <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                                    <button onclick="correto()" class="botaoA" style="left: 40%;">B</button>
+                                                                    <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
+                                                                </div>`);
+            }
 
             return;
         }
@@ -271,7 +356,7 @@ function dado() {
 
         pJ3 = (pJ3 + resultado);
 
-        if(pJ3 > 22){
+        if (pJ3 > 22) {
             pJ3 = 22;
         }
 
@@ -280,19 +365,59 @@ function dado() {
         if (document.getElementsByClassName("div")[pJ3].classList.contains("bg-dark")) {
             document.getElementById("jogar").disabled = true;
 
-            document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
-                                                            <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador J3</p>
-                                                    
-                                                            <p style="position: absolute; top: 12%; font-weight: 750; word-break: break-all;" class="m-2">Texto da Pergunta</p>
-                                                    
-                                                            <p style="position: absolute; top: 38%; left: 4%; font-weight: 750;">Alternativa 1</p>
-                                                            <p style="position: absolute; top: 48%; left: 4%; font-weight: 750;">Alternativa 2</p>
-                                                            <p style="position: absolute; top: 58%; left: 4%; font-weight: 750;">Alternativa 3</p>
-                                                    
-                                                            <button onclick="correto()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
-                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
-                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
-                                                        </div>`);
+            var sorteioP = Math.floor(Math.random() * 3 + 1);
+
+            if (sorteioP == 1) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                               <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                            
+                                                               <p class="linha1">Segundo a Primeira Lei de Kepler:</p>
+                                                            
+                                                               <p style="top: 20%;" class="alternativas">A - A velocidade de translação de um planeta que orbita o Sol é sempre constante ao longo da órbita.</p>
+                                                               <p style="top: 42%;" class="alternativas">B - A órbita dos planetas em torno do Sol é elíptica e tem o Sol em um de seus focos.</p>
+                                                               <p style="top: 60%;" class="alternativas">C - A linha imaginária que liga a Terra até o Sol varre áreas iguais em períodos iguais.</p>
+                                                            
+                                                               <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                               <button onclick="correto()" class="botaoA" style="left: 40%;">B</button>
+                                                               <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
+                                                            </div>`);
+
+                return;
+            }
+
+            if (sorteioP == 2) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                                            <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                                    
+                                                                            <p class="linha1">Baseado nas leis de Kepler, a velocidade de um planeta:</p>
+                                                                    
+                                                                            <p style="top: 26%;" class="alternativas">A - Independe de sua posição relativamente ao sol.</p>
+                                                                            <p style="top: 43%;" class="alternativas">B - Diminui quando está mais próximo do sol.</p>
+                                                                            <p style="top: 61%;" class="alternativas">C - Aumenta quando está mais próximo do sol.</p>
+                                                                    
+                                                                            <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                                            <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
+                                                                            <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
+                                                                        </div>`);
+
+                return;
+            }
+
+            if (sorteioP == 3) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                                    <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                            
+                                                                    <p class="linha1">No sistema planetário:</p>
+                                                            
+                                                                    <p style="top: 21%;" class="alternativas">A - Cada planeta se move numa trajetória elíptica, tendo o sol como o centro.</p>
+                                                                    <p style="top: 38.5%;" class="alternativas">B - A linha que une o sol ao planeta descreve áreas iguais em tempos iguais.</p>
+                                                                    <p style="top: 57%;" class="alternativas">C - A razão do raio de órbita para seu período é uma constante universal.</p>
+                                                            
+                                                                    <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                                    <button onclick="correto()" class="botaoA" style="left: 40%;">B</button>
+                                                                    <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
+                                                                </div>`);
+            }
 
             return;
         }
@@ -325,7 +450,7 @@ function dado() {
 
         pJ4 = (pJ4 + resultado);
 
-        if(pJ4 > 22){
+        if (pJ4 > 22) {
             pJ4 = 22;
         }
 
@@ -335,19 +460,59 @@ function dado() {
         if (document.getElementsByClassName("div")[pJ4].classList.contains("bg-dark")) {
             document.getElementById("jogar").disabled = true;
 
-            document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
-                                                            <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
-                                                    
-                                                            <p style="position: absolute; top: 12%; font-weight: 750; word-break: break-all;" class="m-2">Texto da Pergunta</p>
-                                                    
-                                                            <p style="position: absolute; top: 38%; left: 4%; font-weight: 750;">Alternativa 1</p>
-                                                            <p style="position: absolute; top: 48%; left: 4%; font-weight: 750;">Alternativa 2</p>
-                                                            <p style="position: absolute; top: 58%; left: 4%; font-weight: 750;">Alternativa 3</p>
-                                                    
-                                                            <button onclick="correto()" style="position: absolute; border-radius: 50px; width: 10%; left: 15%; top: 75%;">A</button>
-                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%;  left: 45%; top: 75%;">B</button>
-                                                            <button onclick="errado()" style="position: absolute; border-radius: 30px; width: 10%; left: 75%; top: 75%;">C</button>
-                                                        </div>`);
+            var sorteioP = Math.floor(Math.random() * 3 + 1);
+
+            if (sorteioP == 1) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                               <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                            
+                                                               <p class="linha1">Segundo a Primeira Lei de Kepler:</p>
+                                                            
+                                                               <p style="top: 20%;" class="alternativas">A - A velocidade de translação de um planeta que orbita o Sol é sempre constante ao longo da órbita.</p>
+                                                               <p style="top: 42%;" class="alternativas">B - A órbita dos planetas em torno do Sol é elíptica e tem o Sol em um de seus focos.</p>
+                                                               <p style="top: 60%;" class="alternativas">C - A linha imaginária que liga a Terra até o Sol varre áreas iguais em períodos iguais.</p>
+                                                            
+                                                               <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                               <button onclick="correto()" class="botaoA" style="left: 40%;">B</button>
+                                                               <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
+                                                            </div>`);
+
+                return;
+            }
+
+            if (sorteioP == 2) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                                            <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                                    
+                                                                            <p class="linha1">Baseado nas leis de Kepler, a velocidade de um planeta:</p>
+                                                                    
+                                                                            <p style="top: 26%;" class="alternativas">A - Independe de sua posição relativamente ao sol.</p>
+                                                                            <p style="top: 43%;" class="alternativas">B - Diminui quando está mais próximo do sol.</p>
+                                                                            <p style="top: 61%;" class="alternativas">C - Aumenta quando está mais próximo do sol.</p>
+                                                                    
+                                                                            <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                                            <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
+                                                                            <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
+                                                                        </div>`);
+
+                return;
+            }
+
+            if (sorteioP == 3) {
+                document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
+                                                                    <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+                                                            
+                                                                    <p class="linha1">No sistema planetário:</p>
+                                                            
+                                                                    <p style="top: 21%;" class="alternativas">A - Cada planeta se move numa trajetória elíptica, tendo o sol como o centro.</p>
+                                                                    <p style="top: 38.5%;" class="alternativas">B - A linha que une o sol ao planeta descreve áreas iguais em tempos iguais.</p>
+                                                                    <p style="top: 57%;" class="alternativas">C - A razão do raio de órbita para seu período é uma constante universal.</p>
+                                                            
+                                                                    <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                                                                    <button onclick="correto()" class="botaoA" style="left: 40%;">B</button>
+                                                                    <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
+                                                                </div>`);
+            }
 
             return;
         }
