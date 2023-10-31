@@ -117,6 +117,8 @@ html {
     width: 100%;
     bottom: -150px;
     position: absolute;
+    font-weight: 750;
+    color: black;
 }
 
 .alternativas {

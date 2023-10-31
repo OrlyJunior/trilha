@@ -16,8 +16,6 @@ var pAtual3 = "";
 
 var pAtual4 = "";
 
-
-
 document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
 
 var tabLength = document.querySelectorAll("div.div").length - 1;
