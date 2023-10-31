@@ -193,8 +193,6 @@ function dado() {
         resultado = resultado + 1;
     }
 
-    document.getElementById("resultado").innerHTML = `<p>Resultado: ${resultado}</p>`;
-
     if (jogador == "J1") {
         if (document.getElementsByTagName("p")[1].innerHTML == jogador) {
             pAtual1 = document.getElementsByTagName("p")[1];
