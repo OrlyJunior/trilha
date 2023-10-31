@@ -24,6 +24,55 @@ var tabLength = document.querySelectorAll("div.div").length - 1;
 
 console.log(tabLength)
 
+function continuar(){
+    document.getElementById("jogar").disabled = false;
+
+    document.getElementById("errado").remove();
+
+    if(jogador == "J1"){
+        jogador = "J2";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+        
+        return;
+    }
+
+    if(jogador == "J2"){
+        jogador = "J3";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+
+        return;
+    }
+
+    if(jogador == "J3"){
+        jogador = "J4";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+
+        return;
+    }
+
+    if(jogador == "J4"){
+        jogador = "J1";
+
+        document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
+
+        return;
+    }
+}
+
+function errado(){
+    document.getElementById("pergunta").remove();
+
+    document.body.insertAdjacentHTML("beforeend", `<div id="errado" class="errado">
+                                                        <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Oops! Essa não era a resposta correta!</p>
+
+                                                        <div style="justify-content: center; width: 100%; border: 0;">
+                                                            <button onclick="continuar()" class="botaoC" style="width: 30%; top: 45%;">Continuar</button>
+                                                        </div>
+                                                    </div>`);
+}
 
 function correto() {
     if (jogador == "J1") {
@@ -140,7 +189,6 @@ function correto() {
 }
 
 function dado() {
-    console.log(Math.floor(Math.random() * 3 + 1))
     var resultado = Math.floor(Math.random() * 6);
 
     if (resultado == 0) {
