@@ -1,0 +1,14 @@
+div {
+    height: 25%;
+    width: 10%;
+    padding: 8px;
+    margin: 7px;
+    background: linear-gradient(299deg, rgba(200, 79, 255, 1) 0%, rgba(155, 67, 255, 1) 25%, rgba(149, 62, 255, 1) 50%, rgba(180, 48, 255, 1) 75%, rgba(179, 0, 255, 1) 100%);
+    border-radius: 12px;
+}
+
+body,
+html {
+    overflow: hidden;
+    background-image: url(Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
+}
