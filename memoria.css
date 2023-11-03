@@ -7,6 +7,18 @@ div {
     border-radius: 12px;
 }
 
+div:hover{
+    cursor: pointer;
+}
+
+#div:hover{
+    cursor: auto;
+}
+
+.hidden{
+    display: none;
+}
+
 body,
 html {
     overflow: hidden;
