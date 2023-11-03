@@ -18,8 +18,6 @@ function randomizar() {
             random++;
         }
 
-        console.log(random)
-
         if (random == i) {
             random = random + 1;
         }
@@ -31,6 +29,8 @@ function randomizar() {
         if (cartas.length == 1) {
             random = 0;
         }
+
+        carta
 
         var carta = document.getElementsByClassName("carta")[i];
 
@@ -44,33 +44,44 @@ function randomizar() {
 
 
 function clique(carta) {
-    if (clique1 != "") {
-        clique2 = carta;
+    console.log(p2);
 
-        for (var i = 0; i < 25; i++) {
-            if (document.getElementsByClassName("carta")[i] == clique1) {
+    console.log(p1 != p2 && p2 != "");
+
+    if(p1.innerHTML != p2.innerHTML && p2 != ""){
+        p1.classList.add("hidden");
+        p2.classList.add("hidden");
+        
+        p1 = "";
+        p2 = "";
+    }
+
+    if(p1 != "" && p2 != ""){
+            p1 = "";
+            p2 = "";
+    }
+
+    if(p1 == ""){
+        for (let i = 0; i < 25; i++) {
+            if(document.getElementsByClassName("carta")[i] == carta){
+                p1 = document.getElementsByTagName("p")[i];
+            }
+        }
+        
+        console.log(p1)
+
+        p1.classList.remove("hidden");
+    }else{
+        for (let i = 0; i < 25; i++) {
+            if(document.getElementsByClassName("carta")[i] == carta){
                 p2 = document.getElementsByTagName("p")[i];
             }
         }
 
+        console.log(p2)
+        
         p2.classList.remove("hidden");
 
-        if (p1 == p2) {
-            p1.classList.add("hidden");
-            p2.classList.add("hidden");
-        }
-
-        p2.classList.remove("hidden");
+        
     }
-
-    
-    clique1 = carta;
-
-    for (var i = 0; i < 25; i++) {
-        if (document.getElementsByClassName("carta")[i] == clique1) {
-            p1 = document.getElementsByTagName("p")[i];
-        }
-    }
-
-    p1.classList.remove("hidden");
 }
