@@ -6,6 +6,8 @@ var clique2 = "";
 var p1 = "";
 var p2 = "";
 
+var corretas = 0;
+
 var vezes = 24;
 
 randomizar();
@@ -44,10 +46,6 @@ function randomizar() {
 
 
 function clique(carta) {
-    console.log(p2);
-
-    console.log(p1 != p2 && p2 != "");
-
     if(p1.innerHTML != p2.innerHTML && p2 != ""){
         p1.classList.add("hidden");
         p2.classList.add("hidden");
@@ -57,8 +55,16 @@ function clique(carta) {
     }
 
     if(p1 != "" && p2 != ""){
-            p1 = "";
-            p2 = "";
+        p1 = "";
+        p2 = "";
+
+        corretas++;
+
+        if(corretas == 12){
+            document.body.insertAdjacentHTML("beforeend", `<div onclick="jogarNovamente()" class="vitoria">
+                                                                <p>Jogar novamente?</p>
+                                                            </div>`);
+        }
     }
 
     if(p1 == ""){
@@ -67,8 +73,6 @@ function clique(carta) {
                 p1 = document.getElementsByTagName("p")[i];
             }
         }
-        
-        console.log(p1)
 
         p1.classList.remove("hidden");
     }else{
@@ -77,11 +81,11 @@ function clique(carta) {
                 p2 = document.getElementsByTagName("p")[i];
             }
         }
-
-        console.log(p2)
         
         p2.classList.remove("hidden");
-
-        
     }
+}
+
+function jogarNovamente(){
+    window.location.reload();
 }
