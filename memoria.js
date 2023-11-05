@@ -32,8 +32,6 @@ function randomizar() {
             random = 0;
         }
 
-        carta
-
         var carta = document.getElementsByClassName("carta")[i];
 
         carta.innerHTML = cartas[random];
@@ -46,46 +44,62 @@ function randomizar() {
 
 
 function clique(carta) {
-    if(p1.innerHTML != p2.innerHTML && p2 != ""){
+    if (p1.innerHTML != p2.innerHTML && p2 != "") {
         p1.classList.add("hidden");
         p2.classList.add("hidden");
-        
+
         p1 = "";
         p2 = "";
     }
 
-    if(p1 != "" && p2 != ""){
+    console.log(p1)
+
+    if (p1 != "" && p2 != "") {
         p1 = "";
         p2 = "";
 
         corretas++;
 
-        if(corretas == 12){
+        if (corretas == 11) {
             document.body.insertAdjacentHTML("beforeend", `<div onclick="jogarNovamente()" class="vitoria">
                                                                 <p>Jogar novamente?</p>
                                                             </div>`);
         }
     }
 
-    if(p1 == ""){
+    if (p1 == "") {
         for (let i = 0; i < 25; i++) {
-            if(document.getElementsByClassName("carta")[i] == carta){
+            if (document.getElementsByClassName("carta")[i] == carta) {
                 p1 = document.getElementsByTagName("p")[i];
+
+                break;
             }
         }
 
         p1.classList.remove("hidden");
-    }else{
+    } else {
         for (let i = 0; i < 25; i++) {
-            if(document.getElementsByClassName("carta")[i] == carta){
+            if (document.getElementsByClassName("carta")[i] == carta) {
                 p2 = document.getElementsByTagName("p")[i];
+
+                break;
             }
         }
-        
+
+        console.log(p2)
+
         p2.classList.remove("hidden");
+    }
+
+    if (p1 === p2) {
+        p1.classList.add("hidden");
+        p2.classList.add("hidden");
+
+        p1 = "";
+        p2 = "";
     }
 }
 
-function jogarNovamente(){
+function jogarNovamente() {
     window.location.reload();
 }
