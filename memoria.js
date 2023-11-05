@@ -1,7 +1,6 @@
 var cartas = ["<p class='hidden'>Periélio</p>", "<p class='hidden'>Afélio</p>", "<p class='hidden'>1º Lei de Kepler</p>", "<p class='hidden'>2º Lei de Kepler</p>", "<p class='hidden'>3º Lei de Kepler</p>", "<p class='hidden'>Órbita</p>", "<p class='hidden'>Planetas</p>", "<p class='hidden'>Kepler</p>", "<p class='hidden'>Lei das Áreas</p>", "<p class='hidden'>Lei das Órbitas Elípticas</p>", "<p class='hidden'>Lei dos Períodos</p>", "<p class='hidden'>Estrelas</p>", "<p class='hidden'>Periélio</p>", "<p class='hidden'>Afélio</p>", "<p class='hidden'>1º Lei de Kepler</p>", "<p class='hidden'>2º Lei de Kepler</p>", "<p class='hidden'>3º Lei de Kepler</p>", "<p class='hidden'>Órbita</p>", "<p class='hidden'>Planetas</p>", "<p class='hidden'>Kepler</p>", "<p class='hidden'>Lei das Áreas</p>", "<p class='hidden'>Lei das Órbitas Elípticas</p>", "<p class='hidden'>Lei dos Períodos</p>", "<p class='hidden'>Estrelas</p>"];
 
 var clique1 = "";
-var clique2 = "";
 
 var p1 = "";
 var p2 = "";
@@ -34,6 +33,8 @@ function randomizar() {
 
         var carta = document.getElementsByClassName("carta")[i];
 
+        document.getElementsByClassName("carta")[i];
+
         carta.innerHTML = cartas[random];
 
         cartas.splice(random, 1);
@@ -41,7 +42,6 @@ function randomizar() {
         vezes--;
     }
 }
-
 
 function clique(carta) {
     if (p1.innerHTML != p2.innerHTML && p2 != "") {
@@ -55,12 +55,15 @@ function clique(carta) {
     console.log(p1)
 
     if (p1 != "" && p2 != "") {
+        clique1.removeAttribute("onclick");
+        clique2.removeAttribute("onclick");
+
         p1 = "";
         p2 = "";
 
         corretas++;
 
-        if (corretas == 11) {
+        if (corretas == 12) {
             document.body.insertAdjacentHTML("beforeend", `<div onclick="jogarNovamente()" class="vitoria">
                                                                 <p>Jogar novamente?</p>
                                                             </div>`);
@@ -70,6 +73,7 @@ function clique(carta) {
     if (p1 == "") {
         for (let i = 0; i < 25; i++) {
             if (document.getElementsByClassName("carta")[i] == carta) {
+                clique1 = document.getElementsByClassName("carta")[i];
                 p1 = document.getElementsByTagName("p")[i];
 
                 break;
@@ -80,6 +84,7 @@ function clique(carta) {
     } else {
         for (let i = 0; i < 25; i++) {
             if (document.getElementsByClassName("carta")[i] == carta) {
+                clique2 = document.getElementsByClassName("carta")[i];
                 p2 = document.getElementsByTagName("p")[i];
 
                 break;
