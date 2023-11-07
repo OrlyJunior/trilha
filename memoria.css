@@ -51,17 +51,15 @@ div:hover {
 
 body,
 html {
-    overflow: hidden;
+    overflow-x: hidden;
     background-image: url(Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
     margin: 0px;
 }
 
 @media screen and (max-width: 600px) {
     div{
-        margin-top: 2px;
-        margin-bottom: 2px;
-        height: 10%;
-        width: 18%;
+        height: 8%;
+        width: 17%;
     }
 
     #div{
