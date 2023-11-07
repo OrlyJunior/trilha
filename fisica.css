@@ -7,6 +7,11 @@ div {
     justify-content: center;
 }
 
+.w-50 {
+    font-weight: 750;
+    animation: movimento 0.5s linear 0s 1 normal none;
+}
+
 .pergunta {
     flex-wrap: wrap;
     position: absolute;
@@ -206,15 +211,47 @@ html {
     }
 }
 
-@media screen and (min-height: 300px) and (max-height: 659px) {
+@media screen and (min-height: 300px) and (max-height: 639px) {
+    .divBreakD {
+        top: 21.8%;
+        height: 13.2%;
+    }
+
+    .divBreakE {
+        top: 46.8%;
+        height: 13.4%;
+    }
+
+    .botaoC{
+        width: 90%;
+    }
+}
+
+@media screen and (min-height: 640px) and (max-height: 649px) {
     .divBreakD {
         top: 20.8%;
-        height: 11.8%;
+        height: 13.4%;
+    }
+
+    .divBreakE {
+        top: 46%;
+        height: 13%;
+    }
+
+    .botaoC{
+        width: 90%;
+    }
+}
+
+@media screen and (min-height: 650px) and (max-height: 659px) {
+    .divBreakD {
+        top: 20.7%;
+        height: 11.9%;
     }
 
     .divBreakE {
         top: 44.4%;
-        height: 12%;
+        height: 11.8%;
     }
 
     .botaoC{
@@ -238,7 +275,7 @@ html {
     }
 }
 
-@media screen and (min-height: 735px) and (max-height: 821px) {
+@media screen and (min-height: 735px) and (max-height: 739px) {
     .divBreakD {
         top: 20%;
         height: 13%;
@@ -254,7 +291,35 @@ html {
     }
 }
 
-@media screen and (min-height: 822px) and (max-height: 894px) {
+@media screen and (min-height: 740px) and (max-height: 811px) {
+    .divBreakD {
+        top: 20%;
+        height: 11.8%;
+    }
+
+    .divBreakE {
+        top: 43.5%;
+        height: 12.1%;
+    }
+
+    .botaoC{
+        width: 90%;
+    }
+}
+
+@media screen and (min-height: 812px) and (max-height: 821px) {
+    .divBreakD {
+        top: 19.3%;
+        height: 11.5%;
+    }
+
+    .divBreakE {
+        top: 42.6%;
+        height: 11.6%;
+    }
+}
+
+@media screen and (min-height: 822px) and (max-height: 843px) {
     .divBreakD {
         top: 19.2%;
         height: 12.1%;
@@ -263,6 +328,18 @@ html {
     .divBreakE {
         top: 43.3%;
         height: 12.2%;
+    }
+}
+
+@media screen and (min-height: 844px) and (max-height: 894px) {
+    .divBreakD {
+        top: 19.2%;
+        height: 11.3%;
+    }
+
+    .divBreakE {
+        top: 42.3%;
+        height: 11.4%;
     }
 }
 
@@ -283,7 +360,7 @@ html {
     }
 }
 
-@media screen and (min-height: 913px) and (max-height: 916px) {
+@media screen and (min-height: 913px) and (max-height: 950px) {
     .divBreakD {
         top: 18.7%;
         height: 11.3%;
@@ -309,5 +386,62 @@ html {
     100% {
         width: 50%;
         height: 80%;
+    }
+}
+
+@keyframes movimento{
+    0%{
+        font-weight: 0;
+        opacity: 0.0;
+    }
+
+    10%{
+        font-weight: 50;
+        opacity: 0.1;
+    }
+
+    20%{
+        font-weight: 100;
+        opacity: 0.2;
+    }
+
+    30%{
+        font-weight: 200;
+        opacity: 0.3;
+    }
+
+    40%{
+        font-weight: 400;
+        opacity: 0.4;
+    }
+
+    50%{
+        font-weight: 500;
+        opacity: 0.5;
+    }
+
+    60%{
+        font-weight: 600;
+        opacity: 0.6;
+    }
+
+    70%{
+        font-weight: 650;
+        opacity: 0.7;
+    }
+
+    80%{
+        font-weight: 700;
+        opacity: 0.8;
+    }
+
+    90%{
+        font-weight: 725;
+        opacity: 0.9;
+    }
+
+    100%{
+        font-weight: 750;
+        opacity: 1.0;
     }
 }

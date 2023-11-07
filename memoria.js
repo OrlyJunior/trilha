@@ -48,15 +48,14 @@ function clique(carta) {
         p1.classList.add("hidden");
         p2.classList.add("hidden");
 
+        clique1.setAttribute("onclick", "clique(this)");
+        clique2.setAttribute("onclick", "clique(this)");
+
         p1 = "";
         p2 = "";
     }
 
-    console.log(p1)
-
     if (p1 != "" && p2 != "") {
-        clique1.removeAttribute("onclick");
-        clique2.removeAttribute("onclick");
 
         p1 = "";
         p2 = "";
@@ -74,6 +73,8 @@ function clique(carta) {
         for (let i = 0; i < 25; i++) {
             if (document.getElementsByClassName("carta")[i] == carta) {
                 clique1 = document.getElementsByClassName("carta")[i];
+                clique1.removeAttribute("onclick");
+
                 p1 = document.getElementsByTagName("p")[i];
 
                 break;
@@ -85,6 +86,8 @@ function clique(carta) {
         for (let i = 0; i < 25; i++) {
             if (document.getElementsByClassName("carta")[i] == carta) {
                 clique2 = document.getElementsByClassName("carta")[i];
+                clique2.removeAttribute("onclick");
+
                 p2 = document.getElementsByTagName("p")[i];
 
                 break;
