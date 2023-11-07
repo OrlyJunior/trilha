@@ -1,6 +1,6 @@
 div {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 25%;
     width: 10%;
     padding: 8px;
@@ -51,7 +51,6 @@ div:hover {
 
 body,
 html {
-    overflow-x: hidden;
     background-image: url(Imagens/ceu-de-espaco-3d-abstrato-com-estrelas-e-nebulosa.jpg);
     margin: 0px;
 }
@@ -60,6 +59,7 @@ html {
     div{
         height: 8%;
         width: 17%;
+        margin: 4px;
     }
 
     #div{
