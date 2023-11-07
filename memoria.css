@@ -1,6 +1,6 @@
 div {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     height: 25%;
     width: 10%;
     padding: 8px;
@@ -57,9 +57,15 @@ html {
 
 @media screen and (max-width: 600px) {
     div{
-        height: 8%;
+        height: 6%;
         width: 17%;
-        margin: 4px;
+        margin-left: 4px;
+        margin-right: 4px;
+        overflow-y: scroll;
+    }
+
+    body{
+        height: 95%;
     }
 
     #div{
