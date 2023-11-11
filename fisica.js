@@ -187,12 +187,13 @@ function correto() {
 }
 
 function dado() {
-    console.log(Math.floor(Math.random() * 9))
-    var resultado = Math.floor(Math.random() * 6);
+    resultado = Math.floor(Math.random() * 6);
 
     if (resultado == 0) {
         resultado = resultado + 1;
     }
+
+    num.innerHTML = resultado;
 
     if (jogador == "J1") {
         if (document.getElementsByTagName("p")[1].innerHTML == jogador) {
