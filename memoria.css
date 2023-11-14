@@ -8,12 +8,9 @@ div {
     border-radius: 12px;
 }
 
-.carta{
+.carta {
     align-items: center;
-}
-
-.carta2{
-    align-items: center;
+    overflow: hidden;
 }
 
 p {
@@ -42,7 +39,7 @@ div:hover {
     animation: entrada 0.3s linear 0s 1 normal none;
 }
 
-.jN{
+.jN {
     align-items: center;
     height: 15%;
     width: 80%;
@@ -53,7 +50,7 @@ div:hover {
     top: 30%;
 }
 
-.menu{
+.menu {
     align-items: center;
     height: 15%;
     width: 80%;
@@ -79,7 +76,7 @@ html {
 }
 
 @media screen and (max-width: 600px) {
-    div{
+    div {
         height: 6%;
         width: 17%;
         margin-left: 4px;
@@ -87,11 +84,11 @@ html {
         overflow-y: scroll;
     }
 
-    body{
+    body {
         height: 95%;
     }
 
-    #div{
+    #div {
         margin: 0px;
     }
 }
@@ -101,6 +98,7 @@ html {
         width: 0%;
         height: 0%;
     }
+
     100% {
         width: 20%;
         height: 5%;
