@@ -10,7 +10,7 @@ div {
 
 .carta {
     align-items: center;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 p {
