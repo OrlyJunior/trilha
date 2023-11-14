@@ -389,18 +389,18 @@ function dado() {
 
             if (sorteioP == 9) {
                 document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
-                                                                <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
-                                                            
-                                                                <p class="linha1">Qual dos seguintes cientistas trabalhou com Johannes Kepler e contribuiu para a compreensão das leis do movimento planetário?</p>
-                                                            
-                                                                <p style="top: 25%;" class="alternativas">A - Copérnico.</p>
-                                                                <p style="top: 42%;" class="alternativas">B - Albert Einstein.</p>
-                                                                <p style="top: 60%;" class="alternativas">C - Galileu Galilei.</p>
-                                                            
-                                                                <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
-                                                                <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
-                                                                <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
-                                                            </div>`);
+                <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+            
+                <p class="linha1">Qual dos seguintes cientistas trabalhou com Johannes Kepler e contribuiu para a compreensão das leis do movimento planetário?</p>
+            
+                <p style="top: 32%;" class="alternativas">A - Copérnico.</p>
+                <p style="top: 49%;" class="alternativas">B - Albert Einstein.</p>
+                <p style="top: 67%;" class="alternativas">C - Galileu Galilei.</p>
+            
+                <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
+                <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
+            </div>`);
 
                 return;
             }
@@ -603,18 +603,18 @@ function dado() {
 
             if (sorteioP == 9) {
                 document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
-                                                                    <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
-                                                                
-                                                                    <p class="linha1">Qual dos seguintes cientistas trabalhou com Johannes Kepler e contribuiu para a compreensão das leis do movimento planetário?</p>
-                                                                
-                                                                    <p style="top: 25%;" class="alternativas">A - Copérnico.</p>
-                                                                    <p style="top: 42%;" class="alternativas">B - Albert Einstein.</p>
-                                                                    <p style="top: 60%;" class="alternativas">C - Galileu Galilei.</p>
-                                                                
-                                                                    <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
-                                                                    <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
-                                                                    <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
-                                                                </div>`);
+                <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+            
+                <p class="linha1">Qual dos seguintes cientistas trabalhou com Johannes Kepler e contribuiu para a compreensão das leis do movimento planetário?</p>
+            
+                <p style="top: 32%;" class="alternativas">A - Copérnico.</p>
+                <p style="top: 49%;" class="alternativas">B - Albert Einstein.</p>
+                <p style="top: 67%;" class="alternativas">C - Galileu Galilei.</p>
+            
+                <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
+                <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
+            </div>`);
 
                 return;
             }
@@ -817,18 +817,18 @@ function dado() {
 
             if (sorteioP == 9) {
                 document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
-                                                                    <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
-                                                                
-                                                                    <p class="linha1">Qual dos seguintes cientistas trabalhou com Johannes Kepler e contribuiu para a compreensão das leis do movimento planetário?</p>
-                                                                
-                                                                    <p style="top: 25%;" class="alternativas">A - Copérnico.</p>
-                                                                    <p style="top: 42%;" class="alternativas">B - Albert Einstein.</p>
-                                                                    <p style="top: 60%;" class="alternativas">C - Galileu Galilei.</p>
-                                                                
-                                                                    <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
-                                                                    <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
-                                                                    <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
-                                                                </div>`);
+                <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+            
+                <p class="linha1">Qual dos seguintes cientistas trabalhou com Johannes Kepler e contribuiu para a compreensão das leis do movimento planetário?</p>
+            
+                <p style="top: 32%;" class="alternativas">A - Copérnico.</p>
+                <p style="top: 49%;" class="alternativas">B - Albert Einstein.</p>
+                <p style="top: 67%;" class="alternativas">C - Galileu Galilei.</p>
+            
+                <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
+                <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
+            </div>`);
 
                 return;
             }
@@ -1034,18 +1034,18 @@ function dado() {
 
             if (sorteioP == 9) {
                 document.body.insertAdjacentHTML("beforeend", `<div id="pergunta" class="pergunta">
-                                                                    <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
-                                                                
-                                                                    <p class="linha1">Qual dos seguintes cientistas trabalhou com Johannes Kepler e contribuiu para a compreensão das leis do movimento planetário?</p>
-                                                                
-                                                                    <p style="top: 25%;" class="alternativas">A - Copérnico.</p>
-                                                                    <p style="top: 42%;" class="alternativas">B - Albert Einstein.</p>
-                                                                    <p style="top: 60%;" class="alternativas">C - Galileu Galilei.</p>
-                                                                
-                                                                    <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
-                                                                    <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
-                                                                    <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
-                                                                </div>`);
+                <p class="w-100 p-3 bg-primary text-center perguntaTitulo">Pergunta para o jogador ${jogador}</p>
+            
+                <p class="linha1">Qual dos seguintes cientistas trabalhou com Johannes Kepler e contribuiu para a compreensão das leis do movimento planetário?</p>
+            
+                <p style="top: 32%;" class="alternativas">A - Copérnico.</p>
+                <p style="top: 49%;" class="alternativas">B - Albert Einstein.</p>
+                <p style="top: 67%;" class="alternativas">C - Galileu Galilei.</p>
+            
+                <button onclick="errado()" class="botaoA" style="left: 8%;">A</button>
+                <button onclick="errado()" class="botaoA" style="left: 40%;">B</button>
+                <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
+            </div>`);
 
                 return;
             }
