@@ -2,6 +2,8 @@ var cartas = ["<p class='hidden'>Periélio</p>", "<p class='hidden'>Afélio</p>"
 
 var clique1 = "";
 
+var ganhou = false;
+
 var p1 = "";
 var p2 = "";
 
@@ -56,17 +58,10 @@ function clique(carta) {
     }
 
     if (p1 != "" && p2 != "") {
-
         p1 = "";
         p2 = "";
 
         corretas++;
-
-        if (corretas == 12) {
-            document.body.insertAdjacentHTML("beforeend", `<div onclick="jogarNovamente()" class="vitoria">
-                                                                <p>Jogar novamente?</p>
-                                                            </div>`);
-        }
     }
 
     if (p1 == "") {
@@ -93,9 +88,7 @@ function clique(carta) {
                 break;
             }
         }
-
-        console.log(p2)
-
+        
         p2.classList.remove("hidden");
     }
 
@@ -106,8 +99,32 @@ function clique(carta) {
         p1 = "";
         p2 = "";
     }
+
+    if (ganhou) {
+        document.body.insertAdjacentHTML("beforeend", `<div class="vitoria">
+                                                            <p>Você ganhou!</p>
+                                                            <div onclick="jogarNovamente()" class="jN">
+                                                                <p>Jogar novamente</p>
+                                                            </div>
+                                                            <div onclick="menu()" class="menu">
+                                                                <p>Voltar ao menu</p>
+                                                            </div>
+                                                        </div>`);
+    }
+
+    if(corretas == 11)
+    {
+        ganhou = true;
+    }
+
+    console.log(corretas)
+
 }
 
 function jogarNovamente() {
     window.location.reload();
+}
+
+function menu(){
+    window.location.href = `index.html`;
 }

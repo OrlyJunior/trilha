@@ -30,15 +30,38 @@ div:hover {
     text-align: center;
     justify-content: center;
     display: flex;
-    align-items: center;
     padding: 12px;
-    height: 5%;
+    top: 25%;
+    height: 40%;
     width: 40%;
     left: 30%;
+    cursor: auto !important;
     position: absolute;
     bottom: 47.5%;
     background: rgb(108, 0, 158);
     animation: entrada 0.3s linear 0s 1 normal none;
+}
+
+.jN{
+    align-items: center;
+    height: 15%;
+    width: 80%;
+    overflow: hidden;
+    background: none;
+    background-color: rgb(127, 31, 172);
+    position: absolute;
+    top: 30%;
+}
+
+.menu{
+    align-items: center;
+    height: 15%;
+    width: 80%;
+    overflow: hidden;
+    background: none;
+    background-color: rgb(127, 31, 172);
+    position: absolute;
+    top: 65%;
 }
 
 #div:hover {

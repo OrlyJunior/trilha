@@ -62,7 +62,20 @@ a:active{
 ::-webkit-scrollbar{
     border-radius: 12px;
     color: rgb(0, 0, 0);
+    width: 16px;
 }
+
+::-webkit-scrollbar-track-piece{
+    background: rgb(139, 139, 139);
+    opacity: 0.1;
+    width: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(44, 43, 43);
+    border-radius: 20px;
+    width: 12px;
+  }
 
 @keyframes botao {
     from {

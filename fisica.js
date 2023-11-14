@@ -210,8 +210,26 @@ function dado() {
 
         pJ1 = (pJ1 + resultado);
 
-        if (pJ1 > 22) {
+        if (pJ1 >= 22) {
             pJ1 = 22;
+
+            document.body.insertAdjacentHTML("beforeend", `<div class="venceu">
+                                                                <div class="venceu2 bg-primary">
+                                                                    <p>O vencedor é o jogador ${jogador}</p>
+                                                                </div>
+                                                                <div onclick="jogarNovamente()" class="jogarN bg-primary">
+                                                                    <p>Jogar novamente</p>
+                                                                </div>
+                                                                <div onclick="menu()" class="menu bg-primary">
+                                                                    <p>Voltar ao menu</p>
+                                                                </div>
+                                                            </div>`);
+
+            document.getElementById("jogar").disabled = true;
+
+            document.getElementsByClassName("div")[pJ1].innerHTML += ` <p class="text-success p-2 w-50">J1</p> `;
+
+            return;
         }
 
         document.getElementsByClassName("div")[pJ1].innerHTML += ` <p class="text-success p-2 w-50">J1</p> `;
@@ -240,7 +258,7 @@ function dado() {
                                                                <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                             </div>`);
 
-                                                            return;
+                return;
             }
 
             if (sorteioP == 2) {
@@ -258,7 +276,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 3) {
@@ -276,7 +294,7 @@ function dado() {
                                                                         <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                                     </div>`);
 
-                                                                    return;
+                return;
             }
 
             if (sorteioP == 4) {
@@ -294,7 +312,7 @@ function dado() {
                                                                 <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                             </div>`);
 
-                                                            return;
+                return;
             }
 
             if (sorteioP == 5) {
@@ -312,7 +330,7 @@ function dado() {
                                                                 <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                             </div>`);
 
-                                                            return;
+                return;
             }
 
             if (sorteioP == 6) {
@@ -330,7 +348,7 @@ function dado() {
                                                                 <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                             </div>`);
 
-                                                            return;
+                return;
             }
 
             if (sorteioP == 7) {
@@ -348,7 +366,7 @@ function dado() {
                                                                 <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                             </div>`);
 
-                                                            return;
+                return;
             }
 
             if (sorteioP == 8) {
@@ -366,7 +384,7 @@ function dado() {
                                                                 <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                             </div>`);
 
-                                                            return;
+                return;
             }
 
             if (sorteioP == 9) {
@@ -384,18 +402,8 @@ function dado() {
                                                                 <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                             </div>`);
 
-                                                            return;
+                return;
             }
-        }
-
-        if (document.getElementById("final").innerHTML == ` <p class="text-success p-2 w-50">J1</p> `) {
-            document.body.insertAdjacentHTML("beforeend", `<div style="top: 44%; height: 8.5%; border-radius: 12px;" class="pergunta">
-                                                                    <p style="border-radius: 12px;" class="w-100 p-3 bg-primary text-center">O vencedor é o jogador ${jogador}</p>
-                                                            </div>`);
-
-            document.getElementById("jogar").disabled = true;
-
-            return;
         }
 
         jogador = "J2";
@@ -416,8 +424,26 @@ function dado() {
 
         pJ2 = (pJ2 + resultado);
 
-        if (pJ2 > 22) {
+        if (pJ2 >= 22) {
             pJ2 = 22;
+
+            document.body.insertAdjacentHTML("beforeend", `<div class="venceu">
+                                                                <div class="venceu2 bg-primary">
+                                                                    <p>O vencedor é o jogador ${jogador}</p>
+                                                                </div>
+                                                                <div onclick="jogarNovamente()" class="jogarN bg-primary">
+                                                                    <p>Jogar novamente</p>
+                                                                </div>
+                                                                <div onclick="menu()" class="menu bg-primary">
+                                                                    <p>Voltar ao menu</p>
+                                                                </div>
+                                                            </div>`);
+
+            document.getElementById("jogar").disabled = true;
+
+            document.getElementsByClassName("div")[pJ2].innerHTML += ` <p class="p-2 text-primary w-50">J2</p> `;
+
+            return;
         }
 
         document.getElementsByClassName("div")[pJ2].innerHTML += ` <p class="p-2 text-primary w-50">J2</p> `;
@@ -446,7 +472,7 @@ function dado() {
                                                                    <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 2) {
@@ -464,7 +490,7 @@ function dado() {
                                                                         <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                     </div>`);
 
-                                                                    return;
+                return;
             }
 
             if (sorteioP == 3) {
@@ -482,7 +508,7 @@ function dado() {
                                                                             <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                                         </div>`);
 
-                                                                        return;
+                return;
             }
 
             if (sorteioP == 4) {
@@ -500,7 +526,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 5) {
@@ -518,7 +544,7 @@ function dado() {
                                                                     <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 6) {
@@ -536,7 +562,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 7) {
@@ -554,7 +580,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 8) {
@@ -572,7 +598,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 9) {
@@ -590,18 +616,8 @@ function dado() {
                                                                     <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
-        }
-
-        if (document.getElementById("final").innerHTML == ` <p class="p-2 text-primary w-50">J2</p> `) {
-            document.body.insertAdjacentHTML("beforeend", `<div style="top: 44%; height: 8.5%; border-radius: 12px;" class="pergunta">
-                                                                <p style="border-radius: 12px;" class="w-100 p-3 bg-primary text-center">O vencedor é o jogador J2</p>
-                                                        </div>`);
-
-            document.getElementById("jogar").disabled = true;
-
-            return;
         }
 
         jogador = "J3";
@@ -622,8 +638,26 @@ function dado() {
 
         pJ3 = (pJ3 + resultado);
 
-        if (pJ3 > 22) {
+        if (pJ3 >= 22) {
             pJ3 = 22;
+
+            document.body.insertAdjacentHTML("beforeend", `<div class="venceu">
+                                                                <div class="venceu2 bg-primary">
+                                                                    <p>O vencedor é o jogador ${jogador}</p>
+                                                                </div>
+                                                                <div onclick="jogarNovamente()" class="jogarN bg-primary">
+                                                                    <p>Jogar novamente</p>
+                                                                </div>
+                                                                <div onclick="menu()" class="menu bg-primary">
+                                                                    <p>Voltar ao menu</p>
+                                                                </div>
+                                                            </div>`);
+
+            document.getElementById("jogar").disabled = true;
+
+            document.getElementsByClassName("div")[pJ3].innerHTML += ` <p class="p-2 text-danger w-50">J3</p> `;
+
+            return;
         }
 
         document.getElementsByClassName("div")[pJ3].innerHTML += ` <p class="p-2 text-danger w-50">J3</p> `;
@@ -652,7 +686,7 @@ function dado() {
                                                                    <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 2) {
@@ -670,7 +704,7 @@ function dado() {
                                                                         <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                     </div>`);
 
-                                                                    return;
+                return;
             }
 
             if (sorteioP == 3) {
@@ -688,7 +722,7 @@ function dado() {
                                                                             <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                                         </div>`);
 
-                                                                        return;
+                return;
             }
 
             if (sorteioP == 4) {
@@ -706,7 +740,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 5) {
@@ -724,7 +758,7 @@ function dado() {
                                                                     <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 6) {
@@ -742,7 +776,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 7) {
@@ -760,7 +794,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 8) {
@@ -778,7 +812,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 9) {
@@ -796,19 +830,10 @@ function dado() {
                                                                     <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
-            
-        } 
-        if (document.getElementById("final").innerHTML == ` <p class="p-2 text-danger w-50">J3</p> `) {
-            document.body.insertAdjacentHTML("beforeend", `    <div style="top: 44%; height: 8.5%; border-radius: 12px;" class="pergunta">
-        <p style="border-radius: 12px;" class="w-100 p-3 bg-primary text-center">O vencedor é o jogador J3</p>
-   </div>`);
 
-            document.getElementById("jogar").disabled = true;
-
-            return;
         }
 
         jogador = "J4";
@@ -829,8 +854,26 @@ function dado() {
 
         pJ4 = (pJ4 + resultado);
 
-        if (pJ4 > 22) {
+        if (pJ4 >= 22) {
             pJ4 = 22;
+
+            document.body.insertAdjacentHTML("beforeend", `<div class="venceu">
+                                                                <div class="venceu2 bg-primary">
+                                                                    <p>O vencedor é o jogador ${jogador}</p>
+                                                                </div>
+                                                                <div onclick="jogarNovamente()" class="jogarN bg-primary">
+                                                                    <p>Jogar novamente</p>
+                                                                </div>
+                                                                <div onclick="menu()" class="menu bg-primary">
+                                                                    <p>Voltar ao menu</p>
+                                                                </div>
+                                                            </div>`);
+
+            document.getElementById("jogar").disabled = true;
+
+            document.getElementsByClassName("div")[pJ4].innerHTML += ` <p class="p-2 text-warning w-50">J4</p> `;
+
+            return;
         }
 
         document.getElementsByClassName("div")[pJ4].innerHTML += ` <p class="p-2 text-warning w-50">J4</p> `;
@@ -860,7 +903,7 @@ function dado() {
                                                                    <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 2) {
@@ -878,7 +921,7 @@ function dado() {
                                                                         <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                     </div>`);
 
-                                                                    return;
+                return;
             }
 
             if (sorteioP == 3) {
@@ -896,7 +939,7 @@ function dado() {
                                                                             <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                                         </div>`);
 
-                                                                        return;
+                return;
             }
 
             if (sorteioP == 4) {
@@ -914,7 +957,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 5) {
@@ -932,7 +975,7 @@ function dado() {
                                                                     <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 6) {
@@ -950,7 +993,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 7) {
@@ -968,7 +1011,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 8) {
@@ -986,7 +1029,7 @@ function dado() {
                                                                     <button onclick="errado()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
+                return;
             }
 
             if (sorteioP == 9) {
@@ -1004,21 +1047,20 @@ function dado() {
                                                                     <button onclick="correto()" class="botaoA" style="left: 72%;">C</button>
                                                                 </div>`);
 
-                                                                return;
-            } 
-        }
-
-        if (document.getElementById("final").innerHTML == ` <p class="p-2 text-warning w-50">J4</p> `) {
-            document.body.insertAdjacentHTML("beforeend", `    <div style="top: 44%; height: 8.5%; border-radius: 12px;" class="pergunta">
-                                                                <p style="border-radius: 12px;" class="w-100 p-3 bg-primary text-center">O vencedor é o jogador J4</p>
-                                                           </div>`);
-            document.getElementById("jogar").disabled = true;
-
-            return;
+                return;
+            }
         }
 
         jogador = "J1";
 
         document.getElementById("vez").innerHTML = `Vez de: ${jogador}`;
     }
+}
+
+function jogarNovamente() {
+    window.location.reload();
+}
+
+function menu(){
+    window.location.href = `index.html`
 }
